@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_api_application/model/blush.dart';
 import 'package:ionicons/ionicons.dart';
@@ -12,39 +13,18 @@ class ProductCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
+          SizedBox(
+            height: 160,
+            child: Image.network(
+              'https://picsum.photos/250?image=9',
+              fit: BoxFit.fill,
+            ),
+          ),
           ListTile(
-            leading: const Icon(Ionicons.add),
-            title: const Text('Card title 1'),
-            subtitle: Text(
-              'Secondary Text',
-              style: TextStyle(color: Colors.black.withOpacity(0.6)),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
-              style: TextStyle(color: Colors.black.withOpacity(0.6)),
-            ),
-          ),
-          ButtonBar(
-            alignment: MainAxisAlignment.start,
-            children: [
-              TextButton(
-                // textColor: const Color(0xFF6200EE),
-                onPressed: () {
-                  // Perform some action
-                },
-                child: const Text('ACTION 1'),
-              ),
-              TextButton(
-                // textColor: const Color(0xFF6200EE),
-                onPressed: () {
-                  // Perform some action
-                },
-                child: const Text('ACTION 2'),
-              ),
-            ],
+            title: const Text('Product Name'),
+            subtitle: const Text('P200.00'),
+            trailing:
+                OutlinedButton(onPressed: () {}, child: const Text('More')),
           ),
         ],
       ),
