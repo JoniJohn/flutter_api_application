@@ -12,7 +12,7 @@ class APIApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter API Application',
       theme: ThemeData.dark(),
-      home: const Home(),
+      home: Home(),
     );
   }
 }

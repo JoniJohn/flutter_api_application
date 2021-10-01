@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_application/model/blush.dart';
+import 'package:flutter_api_application/view/product_widgets/products.dart';
 import 'package:ionicons/ionicons.dart';
 
 class Home extends StatelessWidget {
@@ -45,9 +47,7 @@ class Home extends StatelessWidget {
           preferredSize: const Size.fromHeight(54.0),
         ),
       ),
-      body: const Center(
-        child: Text('Some API data'),
-      ),
+      body: ProductView(),
     );
   }
 }
