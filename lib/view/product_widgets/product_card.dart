@@ -4,7 +4,7 @@ import 'package:ionicons/ionicons.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key, required this.blush}) : super(key: key);
-  final Blush blush;
+  final Product blush;
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +46,6 @@ class ProductCard extends StatelessWidget {
               ),
             ],
           ),
-          Image.asset('assets/card-sample-image.jpg'),
-          Image.asset('assets/card-sample-image-2.jpg'),
         ],
       ),
     );

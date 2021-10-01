@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Blush {
+class Product {
   int? id;
   String? brand;
   String? name;
@@ -21,7 +21,7 @@ class Blush {
   String? apiFeatureImage;
   List<ProductColors>? productColors;
 
-  Blush.fromJson(Map<String, dynamic> parseJson) {
+  Product.fromJson(Map<String, dynamic> parseJson) {
     if (kDebugMode) {
       print("PRINT BLUSH: ${parseJson['name']}");
     }
@@ -37,13 +37,21 @@ class Blush {
     rating = parseJson['rating'];
     category = parseJson['category'];
     productType = parseJson['product_type'];
-    createdAt = DateTime.parse(parseJson['created_at']);
-    updatedAt = DateTime.parse(parseJson['updated_at']);
+    createdAt = parseJson['created_at'] != null
+        ? DateTime.tryParse(parseJson['created_at'])
+        : null;
+    updatedAt = parseJson['updated_at'] != null
+        ? DateTime.tryParse(parseJson['updated_at'])
+        : null;
     apiURL = parseJson['product_api_url'];
     apiFeatureImage = parseJson['api_feature_image'];
-    tags = List<String>.from(parseJson['tag_list'].map((tag) => tag));
-    productColors = List<ProductColors>.from(parseJson['product_list']
-        .map((color) => ProductColors.fromJson(color)));
+    tags = parseJson['tag_list'] != null
+        ? List<String>.from(parseJson['tag_list'].map((tag) => tag))
+        : [];
+    productColors = parseJson['product_list'] != null
+        ? List<ProductColors>.from(parseJson['product_list']
+            .map((color) => ProductColors.fromJson(color)))
+        : [];
   }
 }
 
