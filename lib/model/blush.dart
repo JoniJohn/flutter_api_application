@@ -22,9 +22,9 @@ class Product {
   List<ProductColors>? productColors;
 
   Product.fromJson(Map<String, dynamic> parseJson) {
-    if (kDebugMode) {
-      print("PRINT BLUSH: ${parseJson['name']}");
-    }
+    // if (kDebugMode) {
+    //   print("PRINT BLUSH: ${parseJson['name']}");
+    // }
     id = parseJson['id'];
     brand = parseJson['brand'];
     name = parseJson['name'];
