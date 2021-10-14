@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_api_application/model/blush.dart';
 import 'package:flutter_api_application/view/product_widgets/products.dart';
 import 'package:ionicons/ionicons.dart';
 

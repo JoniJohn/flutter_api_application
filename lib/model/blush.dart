@@ -4,7 +4,7 @@ class Product {
   int? id;
   String? brand;
   String? name;
-  double? price;
+  String? price;
   String? priceSign;
   String? currency;
   String? imageLink;
@@ -28,6 +28,7 @@ class Product {
     id = parseJson['id'];
     brand = parseJson['brand'];
     name = parseJson['name'];
+    price = parseJson['price'];
     priceSign = parseJson['price_sign'];
     currency = parseJson['currency'];
     imageLink = parseJson['image_link'];
